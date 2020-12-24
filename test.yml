@@ -1,9 +1,9 @@
 ---
-- name: install package
-  hosts: all
+- hosts: all
+  gather_facts: no
+ 
   tasks:
-  - name: install wget
-    yum:
-      name:
-      - wget
-      state: latest
+  - name: Check the date on the server.
+    command: date
+  - name: Check the eth0 ip on the server.
+    command: ifconfig
