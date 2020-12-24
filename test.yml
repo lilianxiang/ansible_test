@@ -1,0 +1,8 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+    - name: check date
+      commmand: date
+    - name: check ip
+      commmand: ip add
