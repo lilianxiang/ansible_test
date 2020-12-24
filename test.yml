@@ -1,8 +1,9 @@
 ---
-- hosts: all
-  remote_user: root
+- name: install package
+  hosts: all
   tasks:
-    - name: check date
-      commmand: date
-    - name: check ip
-      commmand: ip add
+  - name: install wget
+    yum:
+      name:
+      - wget
+      state: latest
